@@ -1,12 +1,11 @@
-# Project
+# Doordash Client
 
-Please put the important details about the project here including it's description, usage, and any necessary build information.
+A modern .NET library to help facilitate Doordash deliveries.
 
-## IMPORTANT NOTE ABOUT THIS TEMPLATE
+# IDoorDashClient
 
-The .gitconfig file only works because of the include section of the `.git/config` file. If you copy these 
-files out of this template, you will need to add this back
+This uses Refit in the background. The client generates a JWT token based on the given Doordash credentials in your appsettings files, and is automatically used on each request.
 
+# Usage
+Use the extension method AddDoorDashClient as part of building your services/dependencies. Then, inject IDoorDashClient in the service of your choice. Simple as that!
 
-	[include]
-		path = ../.gitconfig

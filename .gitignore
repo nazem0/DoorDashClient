@@ -213,3 +213,5 @@ paket-files/
 __pycache__/
 *.pyc
 *.orig
+/Source/DoorDashClient/DoorDashClient/Properties/PublishProfiles/FolderProfile.pubxml
+/Source/DoorDashClient/Properties/PublishProfiles/FolderProfile.pubxml
