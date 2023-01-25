@@ -8,7 +8,18 @@ namespace DoorDashClient.Models;
 /// </summary>
 public record DoorDashExceptionContent
 {
+	[JsonPropertyName("code")]
+	public string? Code { get; set; }
+	[JsonPropertyName("message")]
+	public string? Message { get; set; }
+	[JsonPropertyName("reason")]
+	[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+	public string? Reason { get; set; }
+	[JsonPropertyName("external_delivery_id")]
+	[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+	public string? ExternalDeliveryId { get; set; }
 	[JsonPropertyName("field_errors")]
+	[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 	public List<FieldError>? FieldErrors { get; set; }
 }
 

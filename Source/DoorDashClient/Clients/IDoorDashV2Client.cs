@@ -7,12 +7,12 @@ using DoorDashClient.Models;
 using DoorDashClient.Models.V2;
 using Refit;
 
-namespace DoorDashClient.Clients.V2;
+namespace DoorDashClient.Clients;
 
 /// <summary>
 /// A Refit interface to represent the Drive v2 API client for Doordash.
 /// </summary>
-public interface IDoorDashClient
+public interface IDoorDashV2Client
 {
 	/// <summary>
 	/// Requests a delivery quote.
