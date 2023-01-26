@@ -2,15 +2,15 @@ namespace DoorDashClient.Models.Classic;
 
 public partial class TokenResponse
 {
-	public string Token { get; set; }
+	public string? Token { get; set; }
 
-	public string DashboardLocation { get; set; }
+	public string? DashboardLocation { get; set; }
 
-	public string AllowedLocations { get; set; }
+	public string? AllowedLocations { get; set; }
 
-	public string AllowedWebsites { get; set; }
+	public string? AllowedWebsites { get; set; }
 
-	public string AllowedOrganizations { get; set; }
+	public string? AllowedOrganizations { get; set; }
 
 	public bool IsAdministrator { get; set; }
 

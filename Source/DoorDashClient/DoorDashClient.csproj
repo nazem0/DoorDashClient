@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFramework>net7.0</TargetFramework>
+	<TargetFramework>net6.0</TargetFramework>
 	<PackageId>Mindfire.DoorDashClient</PackageId>
 	<Authors>Chris Billingsley, Nate Zaugg</Authors>
 	<Description>A modern .NET library to facilitate deliveries with Doordash.</Description>
@@ -21,6 +21,7 @@
 	<Nullable>enable</Nullable>
 	<PackageIcon>logo.png</PackageIcon>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<Title>Mindfire DoorDash Client</Title>
   </PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">

@@ -7,43 +7,43 @@ namespace DoorDashClient.Models.Classic;
 public partial class DeliveryRequest
 {
 	[JsonPropertyName("pickup_address")]
-	public Address PickupAddress { get; set; }
+	public Address? PickupAddress { get; set; }
 
 	[JsonPropertyName("pickup_phone_number")]
-	public string PickupPhoneNumber { get; set; }
+	public string? PickupPhoneNumber { get; set; }
 
 	[JsonPropertyName("dropoff_address")]
-	public Address DropoffAddress { get; set; }
+	public Address? DropoffAddress { get; set; }
 
 	[JsonPropertyName("customer")]
-	public Customer Customer { get; set; }
+	public Customer? Customer { get; set; }
 
 	[JsonPropertyName("order_value")]
 	public long OrderValue { get; set; }
 
 	[JsonPropertyName("delivery_time")]
-	public string DeliveryTime { get; set; }
+	public string? DeliveryTime { get; set; }
 
 	[JsonPropertyName("items")]
-	public List<Item> Items { get; set; }
+	public List<Item>? Items { get; set; }
 
 	[JsonPropertyName("pickup_business_name")]
-	public string PickupBusinessName { get; set; }
+	public string? PickupBusinessName { get; set; }
 
 	[JsonPropertyName("external_store_id")]
-	public string ExternalStoreId { get; set; }
+	public string? ExternalStoreId { get; set; }
 
 	[JsonPropertyName("external_business_name")]
-	public string ExternalBusinessName { get; set; }
+	public string? ExternalBusinessName { get; set; }
 
 	[JsonPropertyName("external_delivery_id")]
-	public string ExternalDeliveryId { get; set; }
+	public string? ExternalDeliveryId { get; set; }
 
 	[JsonPropertyName("pickup_instructions")]
-	public string PickupInstructions { get; set; }
+	public string? PickupInstructions { get; set; }
 
 	[JsonPropertyName("dropoff_instructions")]
-	public string DropoffInstructions { get; set; }
+	public string? DropoffInstructions { get; set; }
 
 	[JsonPropertyName("tip")]
 	public long Tip { get; set; }

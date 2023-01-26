@@ -32,7 +32,7 @@ public interface IDoorDashClassicClient
 	/// <param name="deliveryId">The external delivery ID</param>
 	/// <returns>The delivery details with a cancellation reason.</returns>
 	[Put("/drive/v1/deliveries/{deliveryId}/cancel")]
-	Task<CancelResponse> CancelDelivery(string deliveryId);
+	Task<CancelResponse> CancelDelivery(int deliveryId);
 
 	/// <summary>
 	/// Retrieves delivery details by the external delivery ID.
@@ -40,5 +40,5 @@ public interface IDoorDashClassicClient
 	/// <param name="deliveryId">The external delivery ID</param>
 	/// <returns>Delivery details.</returns>
 	[Get("/drive/v1/deliveries/{deliveryId}")]
-	Task<DeliveryDetailsResponse> GetDeliveryDetails(string deliveryId);
+	Task<DeliveryDetailsResponse> GetDeliveryDetails(int deliveryId);
 }

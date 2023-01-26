@@ -12,7 +12,7 @@ public class QuoteResponse
 	[JsonPropertyName("pickup_time")]
 	public DateTimeOffset PickupTime { get; set; }
 	[JsonPropertyName("currency")]
-	public string Currency { get; set; }
+	public string? Currency { get; set; }
 	[JsonPropertyName("id")]
 	public int Id { get; set; }
 }

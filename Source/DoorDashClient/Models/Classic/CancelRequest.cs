@@ -6,5 +6,5 @@ public class CancelRequest
 {
 	[JsonPropertyName("reason_code")]
 
-	public string ReasonCode { get; set; }
+	public string? ReasonCode { get; set; }
 }

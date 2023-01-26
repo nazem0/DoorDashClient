@@ -7,5 +7,5 @@ public class CancelResponse
 	[JsonPropertyName("return_initiated")]
 	public bool ReturnInitiated { get; set; }
 	[JsonPropertyName("cancelled_at")]
-	public string CancelledAt { get; set; }
+	public string? CancelledAt { get; set; }
 }

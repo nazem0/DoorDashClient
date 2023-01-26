@@ -30,16 +30,7 @@ public static class DependencyRegistrations
 		var doorDashConfig = new DoorDashSettings();
 		config.Bind(DoorDashSettings.SectionName, doorDashConfig);
 
-		var doordashRefitSettings = new RefitSettings()
-		{
-			ContentSerializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions()
-			{
-				PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-				WriteIndented = true
-			})
-		};
-
-		services.AddRefitClient<IDoorDashV2Client>(doordashRefitSettings)
+		services.AddRefitClient<IDoorDashV2Client>()
 			.ConfigureHttpClient((HttpClient client) =>
 			{
 				SetupHttpClient(client, doorDashConfig);
@@ -57,16 +48,7 @@ public static class DependencyRegistrations
 		var doorDashConfig = new DoorDashSettings();
 		config.Bind(DoorDashSettings.SectionName, doorDashConfig);
 
-		var doordashRefitSettings = new RefitSettings()
-		{
-			ContentSerializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions()
-			{
-				PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-				WriteIndented = true
-			})
-		};
-
-		services.AddRefitClient<IDoorDashClassicClient>(doordashRefitSettings)
+		services.AddRefitClient<IDoorDashClassicClient>()
 			.ConfigureHttpClient((HttpClient client) =>
 			{
 				SetupHttpClient(client, doorDashConfig);
