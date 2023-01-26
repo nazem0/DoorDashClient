@@ -6,19 +6,26 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace DoorDashClient.Models.Classic;
-public class BoolConverter : JsonConverter<bool>
+namespace DoorDashClient.Models.Classic
 {
-	public override void Write(Utf8JsonWriter writer, bool value, JsonSerializerOptions options) =>
-		writer.WriteBooleanValue(value);
+	public class BoolConverter : JsonConverter<bool>
+	{
+		public override void Write(Utf8JsonWriter writer, bool value, JsonSerializerOptions options) =>
+			writer.WriteBooleanValue(value);
 
-	public override bool Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
-		reader.TokenType switch
+		public override bool Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
-			JsonTokenType.True => true,
-			JsonTokenType.False => false,
-			JsonTokenType.String => bool.TryParse(reader.GetString(), out var b) ? b : throw new JsonException(),
-			JsonTokenType.Number => reader.TryGetInt64(out long l) ? Convert.ToBoolean(l) : reader.TryGetDouble(out double d) ? Convert.ToBoolean(d) : false,
-			_ => throw new JsonException(),
-		};
+			switch (reader.TokenType)
+			{
+				case JsonTokenType.True: return true;
+				case JsonTokenType.False: return false;
+				case JsonTokenType.String:
+					return bool.TryParse(reader.GetString(), out bool b) ? b : throw new JsonException();
+				case JsonTokenType.Number:
+					return reader.TryGetInt64(out long l) ? Convert.ToBoolean(l) : reader.TryGetDouble(out double d) ? Convert.ToBoolean(d) : false;
+				default:
+					throw new JsonException();
+			}
+		}
+	}
 }

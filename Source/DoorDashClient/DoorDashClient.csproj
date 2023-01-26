@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFramework>net6.0</TargetFramework>
+	<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
 	<PackageId>Mindfire.DoorDashClient</PackageId>
 	<Authors>Chris Billingsley, Nate Zaugg</Authors>
 	<Description>A modern .NET library to facilitate deliveries with Doordash.</Description>
@@ -9,43 +9,25 @@
 	<PackageProjectUrl>https://github.com/MindfireTechnology/DoorDashClient</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/MindfireTechnology/DoorDashClient</RepositoryUrl>
 	<PackageTags>DoorDash, Client</PackageTags>
-	<PackageReleaseNotes>Added Doordash Drive Classic client.</PackageReleaseNotes>
+	<PackageReleaseNotes>Initial release</PackageReleaseNotes>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<IncludeSymbols>true</IncludeSymbols>
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<Company>Mindfire Technology</Company>
-	<Version>1.1.0</Version>
-	<ImplicitUsings>enable</ImplicitUsings>
-	<Nullable>enable</Nullable>
+	<Version>1.0.0</Version>
 	<PackageIcon>logo.png</PackageIcon>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<Title>Mindfire DoorDash Client</Title>
   </PropertyGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
-		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
-		<PackageReference Include="Refit" Version="6.3.2" />
-		<PackageReference Include="Refit.HttpClientFactory" Version="6.3.2" />
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.2" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
-		<PackageReference Include="Refit" Version="6.3.2" />
-		<PackageReference Include="Refit.HttpClientFactory" Version="6.3.2" />
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -57,6 +39,18 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Refit" Version="6.3.2" />
+		<PackageReference Include="Refit.HttpClientFactory" Version="6.3.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.2" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
 	</ItemGroup>
 	
 </Project>
