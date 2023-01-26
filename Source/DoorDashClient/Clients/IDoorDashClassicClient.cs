@@ -29,7 +29,7 @@ public interface IDoorDashClassicClient
 	/// <summary>
 	/// Cancels a current delivery.
 	/// </summary>
-	/// <param name="deliveryId">The external delivery ID</param>
+	/// <param name="deliveryId">The doordash delivery ID</param>
 	/// <returns>The delivery details with a cancellation reason.</returns>
 	[Put("/drive/v1/deliveries/{deliveryId}/cancel")]
 	Task<CancelResponse> CancelDelivery(int deliveryId);
@@ -37,7 +37,7 @@ public interface IDoorDashClassicClient
 	/// <summary>
 	/// Retrieves delivery details by the external delivery ID.
 	/// </summary>
-	/// <param name="deliveryId">The external delivery ID</param>
+	/// <param name="deliveryId">The doordash delivery ID</param>
 	/// <returns>Delivery details.</returns>
 	[Get("/drive/v1/deliveries/{deliveryId}")]
 	Task<DeliveryDetailsResponse> GetDeliveryDetails(int deliveryId);
