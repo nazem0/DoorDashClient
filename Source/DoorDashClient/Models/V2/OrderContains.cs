@@ -5,17 +5,18 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace DoorDashClient.Models.V2;
-
-/// <summary>
-/// Bool flags to tell Doordash if the delivery has certain items that need special attention.
-/// </summary>
-public class OrderContains
+namespace DoorDashClient.Models.V2
 {
 	/// <summary>
-	/// Mark as true if the delivery contains alcohol.
+	/// Bool flags to tell Doordash if the delivery has certain items that need special attention.
 	/// </summary>
-	/// <remarks>Some states will not allow alcohol delivery so be sure to account for this in your code such as catching exceptions.</remarks>
-	[JsonPropertyName("alcohol")]
-	public bool Alcohol { get; set; }
+	public class OrderContains
+	{
+		/// <summary>
+		/// Mark as true if the delivery contains alcohol.
+		/// </summary>
+		/// <remarks>Some states will not allow alcohol delivery so be sure to account for this in your code such as catching exceptions.</remarks>
+		[JsonPropertyName("alcohol")]
+		public bool Alcohol { get; set; }
+	}
 }
