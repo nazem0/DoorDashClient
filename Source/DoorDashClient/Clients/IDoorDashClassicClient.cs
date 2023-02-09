@@ -32,7 +32,7 @@ namespace DoorDashClient.Clients
 		/// <param name="deliveryId">The doordash delivery ID from CreateDelivery</param>
 		/// <param name="request">The request body.</param>
 		/// <returns>A delivery object with the requested updates.</returns>
-		[Patch("drive/v1/deliveries/{deliveryId}")]
+		[Patch("/drive/v1/deliveries/{deliveryId}")]
 		Task<DeliveryResponse> UpdateDelivery(long deliveryId, [Body] UpdateDeliveryRequest request);
 
 		/// <summary>
