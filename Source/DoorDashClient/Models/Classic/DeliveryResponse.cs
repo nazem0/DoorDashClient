@@ -73,7 +73,7 @@ namespace DoorDashClient.Models.Classic
 		[JsonPropertyName("dropoff_instructions")]
 		public string DropoffInstructions { get; set; }
 		[JsonPropertyName("actual_delivery_time")]
-		public string ActualDeliveryTime { get; set; }
+		public DateTimeOffset? ActualDeliveryTime { get; set; }
 		[JsonPropertyName("signature_image_url")]
 		public string SignatureImageUrl { get; set; }
 		public long Quantity { get; set; }
