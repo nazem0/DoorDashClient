@@ -1,41 +1,44 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace DoorDashClient.Models.Classic
 {
 	public class DeliveryResponse
 	{
+		[JsonPropertyName("rating")]
 		public string Rating { get; set; }
 		[JsonPropertyName("pickup_window_start_time")]
-		public DateTime? PickupWindowStartTime { get; set; }
+		public DateTimeOffset? PickupWindowStartTime { get; set; }
 		[JsonPropertyName("pickup_window_end_time")]
-		public DateTime? PickupWindowEndTime { get; set; }
+		public DateTimeOffset? PickupWindowEndTime { get; set; }
 		[JsonPropertyName("delivery_window_start_time")]
-		public DateTime? DeliveryWindowStartTime { get; set; }
+		public DateTimeOffset? DeliveryWindowStartTime { get; set; }
 		[JsonPropertyName("delivery_window_end_time")]
-		public DateTime? DeliveryWindowEndTime { get; set; }
+		public DateTimeOffset? DeliveryWindowEndTime { get; set; }
 		[JsonPropertyName("actual_return_time")]
-		public DateTime? ActualReturnTime { get; set; }
+		public DateTimeOffset? ActualReturnTime { get; set; }
 		[JsonPropertyName("driver_reference_tag")]
 		public string DriverReferenceTag { get; set; }
 		[JsonPropertyName("contains_alcohol")]
 		public bool? ContainsAlcohol { get; set; }
 		[JsonPropertyName("updated_at")]
-		public DateTime? UpdatedAt { get; set; }
+		public DateTimeOffset? UpdatedAt { get; set; }
 		public string Currency { get; set; }
 		[JsonPropertyName("estimated_pickup_time")]
 		public DateTimeOffset? EstimatedPickupTime { get; set; }
 		[JsonPropertyName("order_volume")]
-		public int? OrderVolume { get; set; }
-		public int Id { get; set; }
+		public long OrderVolume { get; set; }
+		[JsonPropertyName("id")]
+		public long Id { get; set; }
 		[JsonPropertyName("dasher_status")]
 		public string DasherStatus { get; set; }
 		[JsonPropertyName("estimated_delivery_time")]
-		public DateTime? EstimatedDeliveryTime { get; set; }
-		public int Fee { get; set; }
+		public DateTimeOffset? EstimatedDeliveryTime { get; set; }
+		public long Fee { get; set; }
 		[JsonPropertyName("quoted_pickup_time")]
-		public DateTime? QuotedPickupTime { get; set; }
+		public DateTimeOffset? QuotedPickupTime { get; set; }
 		[JsonPropertyName("dropoff_address")]
 		public Address DropoffAddress { get; set; }
 		[JsonPropertyName("allow_unattended_delivery")]
@@ -65,7 +68,7 @@ namespace DoorDashClient.Models.Classic
 		public string ExternalDeliveryId { get; set; }
 		public Customer Customer { get; set; }
 		[JsonPropertyName("order_value")]
-		public int OrderValue { get; set; }
+		public long OrderValue { get; set; }
 		public IEnumerable<Item> Items { get; set; }
 		[JsonPropertyName("dropoff_instructions")]
 		public string DropoffInstructions { get; set; }
@@ -73,10 +76,14 @@ namespace DoorDashClient.Models.Classic
 		public string ActualDeliveryTime { get; set; }
 		[JsonPropertyName("signature_image_url")]
 		public string SignatureImageUrl { get; set; }
-		public int Quantity { get; set; }
+		public long Quantity { get; set; }
 		[JsonPropertyName("delivery_verification_image_url")]
 		public string DeliveryVerificationImageUrl { get; set; }
 		[JsonPropertyName("pickup_verification_image_url")]
 		public string PickupVerificationImageUrl { get; set; }
+		[JsonPropertyName("relationship_type")]
+		public string RelationshipType { get; set; }
+		[JsonPropertyName("relationship_description")]
+		public string RelationshipDescription { get; set; }
 	}
 }

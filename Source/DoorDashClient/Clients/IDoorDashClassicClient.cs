@@ -27,19 +27,29 @@ namespace DoorDashClient.Clients
 		Task<DeliveryResponse> CreateDelivery([Body] DeliveryRequest request);
 
 		/// <summary>
+		/// Updates an existing delivery.
+		/// </summary>
+		/// <param name="deliveryId">The doordash delivery ID from CreateDelivery</param>
+		/// <param name="request">The request body.</param>
+		/// <returns>A delivery object with the requested updates.</returns>
+		[Patch("drive/v1/deliveries/{deliveryId}")]
+		Task<DeliveryResponse> UpdateDelivery(long deliveryId, [Body] UpdateDeliveryRequest request);
+
+		/// <summary>
 		/// Cancels a current delivery.
 		/// </summary>
-		/// <param name="deliveryId">The doordash delivery ID</param>
+		/// <param name="deliveryId">The doordash delivery ID.</param>
 		/// <returns>The delivery details with a cancellation reason.</returns>
 		[Put("/drive/v1/deliveries/{deliveryId}/cancel")]
-		Task<CancelResponse> CancelDelivery(int deliveryId);
+		Task<CancelResponse> CancelDelivery(long deliveryId);
 
 		/// <summary>
 		/// Retrieves delivery details by the external delivery ID.
 		/// </summary>
 		/// <param name="deliveryId">The doordash delivery ID</param>
+		/// <param name="extra">Pass "cash_on_delivery" if you need details about that in the delivery object.</param>
 		/// <returns>Delivery details.</returns>
 		[Get("/drive/v1/deliveries/{deliveryId}")]
-		Task<DeliveryDetailsResponse> GetDeliveryDetails(int deliveryId);
+		Task<DeliveryDetailsResponse> GetDeliveryDetails(long deliveryId, [Query] string extra);
 	}
 }
