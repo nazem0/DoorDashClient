@@ -27,7 +27,7 @@ namespace DoorDashClient.Models.Classic
 		[Required]
 		public int OrderValue { get; set; }
 
-		[JsonPropertyName("delivery_time")]
+		[JsonPropertyName("pickup_time")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 		public DateTimeOffset? PickupTime { get; set; }
 
