@@ -39,9 +39,6 @@ namespace DoorDashClient.Models.Classic
 		[JsonPropertyName("estimated_pickup_time")]
 		public DateTimeOffset? EstimatedPickupTime { get; set; }
 
-		[JsonPropertyName("order_volume")]
-		public long OrderVolume { get; set; }
-
 		[JsonPropertyName("id")]
 		public long Id { get; set; }
 

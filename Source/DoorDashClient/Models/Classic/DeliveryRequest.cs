@@ -41,11 +41,11 @@ namespace DoorDashClient.Models.Classic
 
 		[JsonPropertyName("team_lift_required")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public bool TeamLiftRequired { get; set; }
+		public bool? TeamLiftRequired { get; set; }
 
 		[JsonPropertyName("barcode_scanning_required")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public bool BarcodeScanningRequired { get; set; }
+		public bool? BarcodeScanningRequired { get; set; }
 
 		[JsonPropertyName("pickup_business_name")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -60,7 +60,7 @@ namespace DoorDashClient.Models.Classic
 		public string DropoffInstructions { get; set; }
 
 		[JsonPropertyName("tip")]
-		public int Tip { get; set; }
+		public int? Tip { get; set; }
 
 		[JsonPropertyName("external_delivery_id")]
 		public string ExternalDeliveryId { get; set; }
@@ -82,27 +82,27 @@ namespace DoorDashClient.Models.Classic
 
 		[JsonPropertyName("contains_alcohol")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public bool ContainsAlcohol { get; set; }
+		public bool? ContainsAlcohol { get; set; }
 
 		[JsonPropertyName("requires_catering_setup")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public bool RequiresCateringSetup { get; set; }
+		public bool? RequiresCateringSetup { get; set; }
 
 		[JsonPropertyName("num_items")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public int NumItems { get; set; }
+		public int? NumItems { get; set; }
 
 		[JsonPropertyName("signature_required")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public bool SignatureRequired { get; set; }
+		public bool? SignatureRequired { get; set; }
 
 		[JsonPropertyName("allow_unattended_delivery")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public bool AllowUnattendedDelivery { get; set; }
+		public bool? AllowUnattendedDelivery { get; set; }
 
 		[JsonPropertyName("cash_on_delivery")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public int CashOnDelivery { get; set; }
+		public int? CashOnDelivery { get; set; }
 
 		[JsonPropertyName("delivery_metadata")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -114,7 +114,7 @@ namespace DoorDashClient.Models.Classic
 
 		[JsonPropertyName("is_contactless_delivery")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public bool IsContactlessDelivery { get; set; }
+		public bool? IsContactlessDelivery { get; set; }
 
 		[JsonPropertyName("promotion_id")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
