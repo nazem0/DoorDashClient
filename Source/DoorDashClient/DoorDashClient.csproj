@@ -15,9 +15,9 @@
 	<IncludeSymbols>true</IncludeSymbols>
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<Company>Mindfire Technology</Company>
-	<Version>1.1.0</Version>
-	<PackageIcon>logo.png</PackageIcon>
+	<Company>Mindfire Tech</Company>
+	<Version>1.1.1</Version>
+	<PackageIcon>MTechLogoBlueGreyOrange - Square.png</PackageIcon>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<Title>Mindfire DoorDash Client</Title>
   </PropertyGroup>
@@ -35,7 +35,7 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
-		<None Include="..\..\Resources\logo.png">
+		<None Include="..\..\Resources\MTechLogoBlueGreyOrange - Square.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
