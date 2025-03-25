@@ -224,7 +224,7 @@ namespace DoorDashClient.Models.V2
 		/// <summary>
 		/// The Dasher's vehicle model.
 		/// </summary>
-		[JsonPropertyName("dasher_vehicle_odel")]
+		[JsonPropertyName("dasher_vehicle_model")]
 		public string DasherVehicleModel { get; set; }
 		/// <summary>
 		/// The Dasher's vehicle year.
