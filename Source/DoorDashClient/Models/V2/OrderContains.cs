@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace DoorDashClient.Models.V2
 {
@@ -18,5 +13,35 @@ namespace DoorDashClient.Models.V2
 		/// <remarks>Some states will not allow alcohol delivery so be sure to account for this in your code such as catching exceptions.</remarks>
 		[JsonPropertyName("alcohol")]
 		public bool Alcohol { get; set; }
+
+		/// <summary>
+		/// Mark as true if the delivery contains pharmacy items.
+		/// </summary>
+		[JsonPropertyName("pharmacy_items")]
+		public bool PharmacyItems { get; set; }
+
+		/// <summary>
+		/// Mark as true if the delivery contains age-restricted pharmacy items.
+		/// </summary>
+		[JsonPropertyName("age_restricted_pharmacy_items")]
+		public bool AgeRestrictedPharmacyItems { get; set; }
+
+		/// <summary>
+		/// Mark as true if the delivery contains tobacco products.
+		/// </summary>
+		[JsonPropertyName("tobacco")]
+		public bool Tobacco { get; set; }
+
+		/// <summary>
+		/// Mark as true if the delivery contains hemp-based products.
+		/// </summary>
+		[JsonPropertyName("hemp")]
+		public bool Hemp { get; set; }
+
+		/// <summary>
+		/// Mark as true if the delivery contains over-the-counter (OTC) medication.
+		/// </summary>
+		[JsonPropertyName("otc")]
+		public bool Otc { get; set; }
 	}
 }
