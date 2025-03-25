@@ -149,6 +149,10 @@ namespace DoorDashClient.Models.V2
 		[JsonPropertyName("order_contains")]
 		[Required]
 		public OrderContains OrderContains { get; set; }
-
+		/// <summary>
+		/// Indicates whether the dropoff requires a signature.
+		/// </summary>
+		[JsonPropertyName("dropoff_requires_signature")]
+		public bool DropoffRequiresSignature { get; set; }
 	}
 }
